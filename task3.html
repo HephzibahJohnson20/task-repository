@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Maximum in an Array</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 10px;
+        }
+        #result {
+            margin-top: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Find Maximum in an Array</h1>
+    <button onclick="findMax()">Find Maximum</button>
+
+    <div id="result"></div>
+
+    <script>
+        // Hardcoded array
+        const arr = [10, 25, 3, 7, 89, 14];
+
+        // Function to find the maximum number in the array
+        function findMax() {
+            // Use JavaScript's Math.max() and spread operator to find the largest number
+            const maxNum = Math.max(...arr);
+
+            // Display the result
+            document.getElementById('result').innerText = "The largest number is: " + maxNum;
+        }
+    </script>
+
+</body>
+</html>

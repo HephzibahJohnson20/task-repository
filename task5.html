@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial of a Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 10px;
+        }
+        #result {
+            margin-top: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Factorial of a Number</h1>
+    <label for="numberInput">Enter a number: </label>
+    <input type="number" id="numberInput" />
+    <button onclick="findFactorial()">Find Factorial</button>
+
+    <div id="result"></div>
+
+    <script>
+        // Function to find the factorial of a number
+        function findFactorial() {
+            // Get the number from input
+            const num = parseInt(document.getElementById('numberInput').value);
+
+            // Check if the input is valid
+            if (isNaN(num) || num < 0) {
+                document.getElementById('result').innerText = "Please enter a valid non-negative number.";
+                return;
+            }
+
+            // Initialize the result variable
+            let factorial = 1;
+
+            // Loop to calculate the factorial
+            for (let i = 1; i <= num; i++) {
+                factorial *= i;
+            }
+
+            // Display the result
+            document.getElementById('result').innerText = `The factorial of ${num} is: ${factorial}`;
+        }
+    </script>
+
+</body>
+</html>

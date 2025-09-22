@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Smallest Number in an Array</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 10px;
+        }
+        #result {
+            margin-top: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Find the Smallest Number in an Array</h1>
+
+    <button onclick="findSmallest()">Find Smallest Number</button>
+
+    <div id="result"></div>
+
+    <script>
+        // Given array
+        const numbers = [34, 7, 23, 32, 5, 62];
+
+        // Function to find the smallest number in the array
+        function findSmallest() {
+            // Find the smallest number using Math.min and the spread operator
+            const smallest = Math.min(...numbers);
+
+            // Display the result
+            document.getElementById('result').innerText = `The smallest number is: ${smallest}`;
+        }
+    </script>
+
+</body>
+</html>

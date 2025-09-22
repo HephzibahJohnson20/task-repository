@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Second Largest Number</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 10px;
+        }
+        #result {
+            margin-top: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Find Second Largest Number in an Array</h1>
+    <button onclick="findSecondLargest()">Find Second Largest</button>
+
+    <div id="result"></div>
+
+    <script>
+        // Given array
+        const arr = [12, 45, 7, 89, 23];
+
+        // Function to find the second largest number
+        function findSecondLargest() {
+            // Check if the array has at least two elements
+            if (arr.length < 2) {
+                document.getElementById('result').innerText = "Array must have at least two elements.";
+                return;
+            }
+
+            // Sort the array in descending order
+            const sortedArr = arr.sort((a, b) => b - a);
+
+            // The second largest number is at index 1 after sorting
+            const secondLargest = sortedArr[1];
+
+            // Display the result
+            document.getElementById('result').innerText = `The second largest number is: ${secondLargest}`;
+        }
+    </script>
+
+</body>
+</html>
