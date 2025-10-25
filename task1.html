@@ -27,21 +27,13 @@
     <div id="result"></div>
 
     <script>
-        // Function to check if the number is even or odd
         function checkEvenOdd() {
-            // Get the value from the input
             const num = document.getElementById('numberInput').value;
-
-            // Check if input is empty
             if (num === "") {
                 document.getElementById('result').innerText = "Please enter a number.";
                 return;
             }
-
-            // Convert input to integer
             const number = parseInt(num);
-
-            // Check if the number is even or odd using modulus operator
             if (number % 2 === 0) {
                 document.getElementById('result').innerText = "The number is Even.";
             } else {
@@ -52,3 +44,4 @@
 
 </body>
 </html>
+
