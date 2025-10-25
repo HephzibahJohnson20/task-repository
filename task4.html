@@ -27,27 +27,22 @@
     <div id="result"></div>
 
     <script>
-        // Function to count vowels in the given string
         function countVowels() {
-            // Get the input string from the user
             const str = document.getElementById('inputString').value.toLowerCase();
 
-            // Check if the input is empty
             if (str === "") {
                 document.getElementById('result').innerText = "Please enter a string.";
                 return;
-            }
-
-            // Vowel characters
+            }  
             const vowels = "aeiou";
 
-            // Use the filter method to count vowels
+ 
             const vowelCount = Array.from(str).filter(char => vowels.includes(char)).length;
 
-            // Display the result
             document.getElementById('result').innerText = `The number of vowels is: ${vowelCount}`;
         }
     </script>
 
 </body>
 </html>
+
