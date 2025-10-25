@@ -27,27 +27,23 @@
     <div id="result"></div>
 
     <script>
-        // Function to count the words in a string
+  
         function countWords() {
-            // Get the input string
+
             const inputString = document.getElementById('inputString').value;
 
-            // Check if the input string is not empty
             if (inputString.trim() === "") {
                 document.getElementById('result').innerText = "Please enter a sentence.";
                 return;
             }
-
-            // Split the string into words and count them
-            const wordsArray = inputString.trim().split(/\s+/);  // Split by one or more spaces
-
-            // Get the word count
+            const wordsArray = inputString.trim().split(/\s+/);  
+            
             const wordCount = wordsArray.length;
 
-            // Display the result
             document.getElementById('result').innerText = `The sentence has ${wordCount} word(s).`;
         }
     </script>
 
 </body>
 </html>
+
