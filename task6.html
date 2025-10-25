@@ -27,24 +27,19 @@
     <div id="result"></div>
 
     <script>
-        // Function to check if the string is a palindrome
+      
         function checkPalindrome() {
-            // Get the input string
+   
             const str = document.getElementById('inputString').value.toLowerCase();
 
-            // Check if input is empty
             if (str === "") {
                 document.getElementById('result').innerText = "Please enter a string.";
                 return;
             }
-
-            // Remove non-alphanumeric characters and spaces, and convert to lowercase
             const cleanedStr = str.replace(/[^a-z0-9]/gi, '').toLowerCase();
 
-            // Reverse the cleaned string
             const reversedStr = cleanedStr.split('').reverse().join('');
 
-            // Check if the string is a palindrome
             if (cleanedStr === reversedStr) {
                 document.getElementById('result').innerText = `"${str}" is a Palindrome.`;
             } else {
@@ -55,3 +50,4 @@
 
 </body>
 </html>
+
