@@ -27,24 +27,22 @@
     <div id="result"></div>
 
     <script>
-        // Function to reverse the string
+
         function reverseString() {
-            // Get the value from the input
+   
             const str = document.getElementById('stringInput').value;
 
-            // Check if input is empty
             if (str === "") {
                 document.getElementById('result').innerText = "Please enter a string.";
                 return;
             }
-
-            // Reverse the string using JavaScript's built-in methods
+            
             const reversedStr = str.split('').reverse().join('');
 
-            // Display the reversed string
             document.getElementById('result').innerText = "Reversed string: " + reversedStr;
         }
     </script>
 
 </body>
 </html>
+
