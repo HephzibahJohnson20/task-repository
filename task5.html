@@ -27,29 +27,22 @@
     <div id="result"></div>
 
     <script>
-        // Function to find the factorial of a number
+
         function findFactorial() {
-            // Get the number from input
             const num = parseInt(document.getElementById('numberInput').value);
 
-            // Check if the input is valid
             if (isNaN(num) || num < 0) {
                 document.getElementById('result').innerText = "Please enter a valid non-negative number.";
                 return;
             }
-
-            // Initialize the result variable
             let factorial = 1;
-
-            // Loop to calculate the factorial
             for (let i = 1; i <= num; i++) {
                 factorial *= i;
             }
-
-            // Display the result
             document.getElementById('result').innerText = `The factorial of ${num} is: ${factorial}`;
         }
     </script>
 
 </body>
 </html>
+
